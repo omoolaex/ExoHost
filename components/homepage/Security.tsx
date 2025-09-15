@@ -1,8 +1,8 @@
-// components/sections/Security.tsx
 "use client";
 
 import React from "react";
 import { ShieldCheck, Bug, Lock, Database } from "lucide-react";
+import Image from "next/image";
 
 const Security: React.FC = () => {
   return (
@@ -10,13 +10,12 @@ const Security: React.FC = () => {
       <div className="grid md:grid-cols-2 gap-10 items-center">
         {/* Image */}
         <div>
-          <img
+          <Image
             src="/images/exohost-security.webp"
             alt="ExoHost Security"
-            className="w-full h-auto"
             width={400}
             height={280}
-            loading="lazy"
+            className="w-full h-auto"
           />
         </div>
 

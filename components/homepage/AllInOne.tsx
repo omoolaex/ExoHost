@@ -1,8 +1,8 @@
-// components/sections/AllInOne.tsx
 "use client";
 
 import React from "react";
 import { Globe, Mail, Zap, Layout } from "lucide-react";
+import Image from "next/image";
 
 const AllInOne: React.FC = () => {
   return (
@@ -48,15 +48,14 @@ const AllInOne: React.FC = () => {
           </ul>
         </div>
 
-        {/* Image (placeholder for ExoHost graphic) */}
+        {/* Image */}
         <div className="order-1 md:order-2">
-          <img
+          <Image
             src="/images/all-in-one-exohost.webp"
             alt="ExoHost all-in-one solutions"
-            className="w-full h-auto"
             width={400}
             height={280}
-            loading="lazy"
+            className="w-full h-auto"
           />
         </div>
       </div>

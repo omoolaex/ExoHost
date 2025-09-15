@@ -3,6 +3,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Facebook, Twitter, Linkedin } from "lucide-react";
 
 const Footer: React.FC = () => {
@@ -14,15 +15,41 @@ const Footer: React.FC = () => {
         <div>
           <h5 className="text-white font-semibold mb-3">Domain Names</h5>
           <ul className="space-y-2">
-            <li><Link href="/domain-registrationr" className="hover:text-white">Register a Domain</Link></li>
-            <li><Link href="/domain-registration#domainTable" className="hover:text-white">Domain Pricing</Link></li>
-            <li><Link href="https://hosting.omoolaex.com.ng/client-area/cart.php?a=add&domain=transfer" className="hover:text-white">Domain Transfers</Link></li>
-            <li><Link href="/whois-lookup" className="hover:text-white">WHOIS Lookup</Link></li>
+            <li>
+              <Link href="/domain-registration" className="hover:text-white">
+                Register a Domain
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/domain-registration#domainTable"
+                className="hover:text-white"
+              >
+                Domain Pricing
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="https://hosting.omoolaex.com.ng/client-area/cart.php?a=add&domain=transfer"
+                className="hover:text-white"
+              >
+                Domain Transfers
+              </Link>
+            </li>
+            <li>
+              <Link href="/whois-lookup" className="hover:text-white">
+                WHOIS Lookup
+              </Link>
+            </li>
           </ul>
 
           <h5 className="text-white font-semibold mt-6 mb-3">Security</h5>
           <ul className="space-y-2">
-            <li><Link href="#" className="hover:text-white">SSL Certificates</Link></li>
+            <li>
+              <Link href="#" className="hover:text-white">
+                SSL Certificates
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -30,10 +57,26 @@ const Footer: React.FC = () => {
         <div>
           <h5 className="text-white font-semibold mb-3">Hosting</h5>
           <ul className="space-y-2">
-            <li><Link href="http://localhost:3000/web-hosting" className="hover:text-white">Web Hosting</Link></li>
-            <li><Link href="#" className="hover:text-white">WordPress Hosting</Link></li>
-            <li><Link href="#" className="hover:text-white">Reseller Hosting</Link></li>
-            <li><Link href="/website-builder" className="hover:text-white">Site Builder</Link></li>
+            <li>
+              <Link href="/web-hosting" className="hover:text-white">
+                Web Hosting
+              </Link>
+            </li>
+            <li>
+              <Link href="#" className="hover:text-white">
+                WordPress Hosting
+              </Link>
+            </li>
+            <li>
+              <Link href="#" className="hover:text-white">
+                Reseller Hosting
+              </Link>
+            </li>
+            <li>
+              <Link href="/website-builder" className="hover:text-white">
+                Site Builder
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -41,12 +84,45 @@ const Footer: React.FC = () => {
         <div>
           <h5 className="text-white font-semibold mb-3">Get Help</h5>
           <ul className="space-y-2">
-            <li><Link href="https://hosting.omoolaex.com.ng/client-area/submitticket.php" className="hover:text-white">Submit a Support Ticket</Link></li>
-            <li><Link href="https://hosting.omoolaex.com.ng/client-area/submitticket.php" className="hover:text-white">Submit a Sales Enquiry</Link></li>
-            <li><Link href="https://hosting.omoolaex.com.ng/client-area/submitticket.php" className="hover:text-white">Report Abuse</Link></li>
-            <li><Link href="#" className="hover:text-white">Blog</Link></li>
-            <li><Link href="#" className="hover:text-white">About Us</Link></li>
-            <li><Link href="#" className="hover:text-white">Payment Help</Link></li>
+            <li>
+              <Link
+                href="https://hosting.omoolaex.com.ng/client-area/submitticket.php"
+                className="hover:text-white"
+              >
+                Submit a Support Ticket
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="https://hosting.omoolaex.com.ng/client-area/submitticket.php"
+                className="hover:text-white"
+              >
+                Submit a Sales Enquiry
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="https://hosting.omoolaex.com.ng/client-area/submitticket.php"
+                className="hover:text-white"
+              >
+                Report Abuse
+              </Link>
+            </li>
+            <li>
+              <Link href="#" className="hover:text-white">
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link href="#" className="hover:text-white">
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link href="#" className="hover:text-white">
+                Payment Help
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -54,11 +130,31 @@ const Footer: React.FC = () => {
         <div>
           <h5 className="text-white font-semibold mb-3">Legals</h5>
           <ul className="space-y-2">
-            <li><Link href="#" className="hover:text-white">Terms & Conditions</Link></li>
-            <li><Link href="#" className="hover:text-white">Refund Policy</Link></li>
-            <li><Link href="#" className="hover:text-white">Privacy Policy</Link></li>
-            <li><Link href="#" className="hover:text-white">Acceptable Use Policy</Link></li>
-            <li><Link href="#" className="hover:text-white">Affiliate Terms</Link></li>
+            <li>
+              <Link href="#" className="hover:text-white">
+                Terms & Conditions
+              </Link>
+            </li>
+            <li>
+              <Link href="#" className="hover:text-white">
+                Refund Policy
+              </Link>
+            </li>
+            <li>
+              <Link href="#" className="hover:text-white">
+                Privacy Policy
+              </Link>
+            </li>
+            <li>
+              <Link href="#" className="hover:text-white">
+                Acceptable Use Policy
+              </Link>
+            </li>
+            <li>
+              <Link href="#" className="hover:text-white">
+                Affiliate Terms
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
@@ -73,7 +169,9 @@ const Footer: React.FC = () => {
             target="_blank"
             className="text-white hover:underline"
           >
-            <span className="text-white hover:text-[var(--color-primary)]">OmoolaEx Ltd</span>
+            <span className="text-white hover:text-[var(--color-primary)]">
+              OmoolaEx Ltd
+            </span>
           </Link>
         </span>
       </div>
@@ -84,20 +182,50 @@ const Footer: React.FC = () => {
           {/* Payments */}
           <div className="flex items-center gap-4 text-xs">
             <span>We Accept:</span>
-            <img src="/payments/monnify.svg" alt="Monnify" className="h-5" />
-            <img src="/payments/flutterwave.svg" alt="Flutterwave" className="h-5" />
-            <img src="/payments/visa.svg" alt="Visa" className="h-4" />
+            <Image
+              src="/payments/monnify.svg"
+              alt="Monnify"
+              width={60}
+              height={20}
+              className="h-5 w-auto"
+            />
+            <Image
+              src="/payments/flutterwave.svg"
+              alt="Flutterwave"
+              width={60}
+              height={20}
+              className="h-5 w-auto"
+            />
+            <Image
+              src="/payments/visa.svg"
+              alt="Visa"
+              width={50}
+              height={20}
+              className="h-4 w-auto"
+            />
           </div>
 
           {/* Socials */}
           <div className="flex items-center gap-4">
-            <Link href="https://facebook.com/exohost" target="_blank" aria-label="Facebook">
+            <Link
+              href="https://facebook.com/exohost"
+              target="_blank"
+              aria-label="Facebook"
+            >
               <Facebook className="h-5 w-5 hover:text-white" />
             </Link>
-            <Link href="https://twitter.com/exohost" target="_blank" aria-label="Twitter">
+            <Link
+              href="https://twitter.com/exohost"
+              target="_blank"
+              aria-label="Twitter"
+            >
               <Twitter className="h-5 w-5 hover:text-white" />
             </Link>
-            <Link href="https://linkedin.com/company/exohost" target="_blank" aria-label="LinkedIn">
+            <Link
+              href="https://linkedin.com/company/exohost"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
               <Linkedin className="h-5 w-5 hover:text-white" />
             </Link>
           </div>
@@ -109,7 +237,12 @@ const Footer: React.FC = () => {
         <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400">
           <p>
             By visiting this website, you agree to its{" "}
-            <Link href="/legal/terms-of-use"><span className="text-white hover:text-gray-500">terms of use</span></Link>.
+            <Link href="/legal/terms-of-use">
+              <span className="text-white hover:text-gray-500">
+                terms of use
+              </span>
+            </Link>
+            .
           </p>
           <p>© {new Date().getFullYear()} ExoHost | All Rights Reserved</p>
         </div>

@@ -1,8 +1,8 @@
-// components/sections/Migration.tsx
 "use client";
 
 import React from "react";
 import { MoveRight, FileStack, Globe } from "lucide-react";
+import Image from "next/image";
 
 const Migration: React.FC = () => {
   return (
@@ -43,13 +43,12 @@ const Migration: React.FC = () => {
 
         {/* Image */}
         <div className="order-1 md:order-2">
-          <img
+          <Image
             src="/images/exohost-migration.webp"
             alt="ExoHost Migration"
-            className="w-full h-auto"
             width={400}
             height={280}
-            loading="lazy"
+            className="w-full h-auto"
           />
         </div>
       </div>

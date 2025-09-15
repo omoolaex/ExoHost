@@ -1,7 +1,6 @@
 // components/whois/HostingPlans.tsx
 "use client";
 
-import { useState } from "react";
 import Pricing from "../homepage/Pricing";
 
 

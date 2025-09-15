@@ -3,6 +3,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Header: React.FC = () => {
   const [alertVisible, setAlertVisible] = useState(true);
@@ -60,7 +61,14 @@ const Header: React.FC = () => {
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3 md:py-4">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
-            <img src="/logo-exohost.svg" alt="ExoHost" className="h-10 w-auto" />
+            <Image
+              src="/logo-exohost.svg"
+              alt="ExoHost"
+              width={160}
+              height={40}
+              priority
+              className="h-10 w-auto"
+            />
           </Link>
 
           {/* Desktop nav */}
@@ -175,7 +183,10 @@ const Header: React.FC = () => {
               </button>
               {openDropdown === "partners" && (
                 <div className={dropdownBase}>
-                  <Link href="https://hosting.omoolaex.com.ng/client-area/affiliates.php" className={dropdownLink}>
+                  <Link
+                    href="https://hosting.omoolaex.com.ng/client-area/affiliates.php"
+                    className={dropdownLink}
+                  >
                     <p className="font-semibold">Affiliates</p>
                     <p className="text-xs text-gray-500">Earn by referring</p>
                   </Link>
@@ -216,20 +227,18 @@ const Header: React.FC = () => {
         </div>
       </nav>
 
-      {/* Mobile Drawer as Overlay */}
+      {/* Mobile Drawer remains same */}
       {mobileOpen && (
         <div className="fixed inset-0 z-50 flex">
-          {/* Backdrop (closes on click) */}
           <div
             className="fixed inset-0 bg-black/40 backdrop-blur-sm"
             onClick={() => setMobileOpen(false)}
           ></div>
 
-          {/* Drawer */}
           <div
             ref={mobileRef}
             className="relative z-50 w-72 max-w-full h-full bg-[var(--background)] shadow-xl p-6 overflow-y-auto animate-slide-in-left"
-            onClick={(e) => e.stopPropagation()} // prevent clicks inside from closing
+            onClick={(e) => e.stopPropagation()}
           >
             {/* Mobile menu items */}
             <div className="space-y-4">

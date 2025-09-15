@@ -1,7 +1,7 @@
-// components/sections/Accreditations.tsx
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 const logos = [
   { alt: "NiRA logo", src: "/logos/nira.svg", width: 133, height: 46 },
@@ -26,14 +26,13 @@ const Accreditations: React.FC = () => {
 
       <div className="flex flex-wrap items-center justify-center gap-6">
         {logos.map((logo, idx) => (
-          <img
+          <Image
             key={idx}
             src={logo.src}
             alt={logo.alt}
             width={logo.width}
             height={logo.height}
             className="h-10 md:h-12 lg:h-14 object-contain grayscale hover:grayscale-0 transition"
-            loading="lazy"
           />
         ))}
       </div>
