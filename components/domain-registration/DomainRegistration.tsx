@@ -28,7 +28,7 @@ const DomainRegistration: React.FC = () => {
 
         {/* Domain Search Form */}
         <form
-          action="https://hosting.omoolaex.com.ng/client-area/cart.php?a=add&domain=register"
+          action="https://clients.exohost.com.ng/cart.php?a=add&domain=register"
           method="post"
           className="mt-8 flex flex-col md:flex-row bg-white rounded-xl items-center justify-center gap-2 md:gap-0 max-w-3xl mx-auto"
         >
@@ -78,7 +78,7 @@ const DomainRegistration: React.FC = () => {
         {/* Transfer Link */}
         <p className="mt-8 text-gray-300">
           Already own a domain?{" "}
-          <a href="https://hosting.omoolaex.com.ng/client-area/cart.php?a=add&domain=transfer" 
+          <a href="https://clients.exohost.com.ng/cart.php?a=add&domain=transfer" 
             className="text-green-400 underline font-semibold">
             Transfer It!
           </a>

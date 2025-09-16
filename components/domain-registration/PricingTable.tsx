@@ -10,14 +10,14 @@ type Domain = {
 };
 
 const domains: Domain[] = [
-  { extension: ".com", registration: "₦17,737.50", renewal: "₦30,153.75", transfer: "₦17,737.50", link: "https://hosting.omoolaex.com.ng/client-area/cart.php?a=add&domain=register" },
-  { extension: ".net", registration: "₦22,000.00", renewal: "₦32,000.00", transfer: "₦22,000.00", link: "https://hosting.omoolaex.com.ng/client-area/cart.php?a=add&domain=register" },
-  { extension: ".org", registration: "₦20,000.00", renewal: "₦25,000.00", transfer: "₦20,000.00", link: "https://hosting.omoolaex.com.ng/client-area/cart.php?a=add&domain=register" },
-  { extension: ".biz", registration: "₦30,000.00", renewal: "₦37,000.00", transfer: "₦30,000.00", link: "https://hosting.omoolaex.com.ng/client-area/cart.php?a=add&domain=register" },
-  { extension: ".com.ng", registration: "₦6,448.93", renewal: "₦8,000.00", transfer: "Free", link: "https://hosting.omoolaex.com.ng/client-area/cart.php?a=add&domain=register" },
-  { extension: ".ng", registration: "₦17,500.00", renewal: "₦18,000.00", transfer: "Free", link: "https://hosting.omoolaex.com.ng/client-area/cart.php?a=add&domain=register" },
-  { extension: ".tv", registration: "₦75,000.00", renewal: "₦75,000.00", transfer: "₦75,000.00", link: "https://hosting.omoolaex.com.ng/client-area/cart.php?a=add&domain=register" },
-  { extension: ".io", registration: "₦80,000.00", renewal: "₦100,000.00", transfer: "₦80,000.00", link: "https://hosting.omoolaex.com.ng/client-area/cart.php?a=add&domain=register" },
+  { extension: ".com", registration: "₦17,737.50", renewal: "₦30,153.75", transfer: "₦17,737.50", link: "https://clients.exohost.com.ng/cart.php?a=add&domain=register" },
+  { extension: ".net", registration: "₦22,000.00", renewal: "₦32,000.00", transfer: "₦22,000.00", link: "https://clients.exohost.com.ng/cart.php?a=add&domain=register" },
+  { extension: ".org", registration: "₦20,000.00", renewal: "₦25,000.00", transfer: "₦20,000.00", link: "https://clients.exohost.com.ng/cart.php?a=add&domain=register" },
+  { extension: ".biz", registration: "₦30,000.00", renewal: "₦37,000.00", transfer: "₦30,000.00", link: "https://clients.exohost.com.ng/cart.php?a=add&domain=register" },
+  { extension: ".com.ng", registration: "₦6,448.93", renewal: "₦8,000.00", transfer: "Free", link: "https://clients.exohost.com.ng/cart.php?a=add&domain=register" },
+  { extension: ".ng", registration: "₦17,500.00", renewal: "₦18,000.00", transfer: "Free", link: "https://clients.exohost.com.ng/cart.php?a=add&domain=register" },
+  { extension: ".tv", registration: "₦75,000.00", renewal: "₦75,000.00", transfer: "₦75,000.00", link: "https://clients.exohost.com.ng/cart.php?a=add&domain=register" },
+  { extension: ".io", registration: "₦80,000.00", renewal: "₦100,000.00", transfer: "₦80,000.00", link: "https://clients.exohost.com.ng/cart.php?a=add&domain=register" },
   // Add more domains as needed
 ];
 

@@ -3,14 +3,14 @@
 import React from "react";
 
 const domains = [
-  { tld: ".com", desc: "Ideal for global businesses and brands.", price: 17737.5, link: "https://hosting.omoolaex.com.ng/client-area/cart.php?a=add&domain=register" },
-  { tld: ".com.ng", desc: "Perfect for businesses and brands in Nigeria.", price: 6448.93, link: "https://hosting.omoolaex.com.ng/client-area/cart.php?a=add&domain=register" },
-  { tld: ".ng", desc: "Show your Nigerian presence online.", price: 17500, link: "https://hosting.omoolaex.com.ng/client-area/cart.php?a=add&domain=register" },
-  { tld: ".org", desc: "Great for organizations and nonprofits.", price: 20000, link: "https://hosting.omoolaex.com.ng/client-area/cart.php?a=add&domain=register" },
-  { tld: ".africa", desc: "Showcase your connection to Africa.", price: 20000, link: "https://hosting.omoolaex.com.ng/client-area/cart.php?a=add&domain=register" },
-  { tld: ".org.ng", desc: "For Nigerian nonprofits and organizations.", price: 7800, link: "https://hosting.omoolaex.com.ng/client-area/cart.php?a=add&domain=register" },
-  { tld: ".net.ng", desc: "Network with Nigeria through your domain.", price: 7800, link: "https://hosting.omoolaex.com.ng/client-area/cart.php?a=add&domain=register" },
-  { tld: ".i.ng", desc: "Create a unique Nigerian identity online.", price: 7800, link: "https://hosting.omoolaex.com.ng/client-area/cart.php?a=add&domain=register" },
+  { tld: ".com", desc: "Ideal for global businesses and brands.", price: 17737.5, link: "https://clients.exohost.com.ng/cart.php?a=add&domain=register" },
+  { tld: ".com.ng", desc: "Perfect for businesses and brands in Nigeria.", price: 6448.93, link: "https://clients.exohost.com.ng/cart.php?a=add&domain=register" },
+  { tld: ".ng", desc: "Show your Nigerian presence online.", price: 17500, link: "https://clients.exohost.com.ng/cart.php?a=add&domain=register" },
+  { tld: ".org", desc: "Great for organizations and nonprofits.", price: 20000, link: "https://clients.exohost.com.ng/cart.php?a=add&domain=register" },
+  { tld: ".africa", desc: "Showcase your connection to Africa.", price: 20000, link: "https://clients.exohost.com.ng/cart.php?a=add&domain=register" },
+  { tld: ".org.ng", desc: "For Nigerian nonprofits and organizations.", price: 7800, link: "https://clients.exohost.com.ng/cart.php?a=add&domain=register" },
+  { tld: ".net.ng", desc: "Network with Nigeria through your domain.", price: 7800, link: "https://clients.exohost.com.ng/cart.php?a=add&domain=register" },
+  { tld: ".i.ng", desc: "Create a unique Nigerian identity online.", price: 7800, link: "https://clients.exohost.com.ng/cart.php?a=add&domain=register" },
 ];
 
 const DomainVariety: React.FC = () => {

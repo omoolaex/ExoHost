@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
           <ul className="space-y-2">
             <li><Link href="/domain-registration" className="hover:text-white">Register a Domain</Link></li>
             <li><Link href="/domain-registration#domainTable" className="hover:text-white">Domain Pricing</Link></li>
-            <li><Link href="https://hosting.omoolaex.com.ng/client-area/cart.php?a=add&domain=transfer" className="hover:text-white">Domain Transfers</Link></li>
+            <li><Link href="https://clients.exohost.com.ng/cart.php?a=add&domain=transfer" className="hover:text-white">Domain Transfers</Link></li>
             <li><Link href="/whois-lookup" className="hover:text-white">WHOIS Lookup</Link></li>
           </ul>
 
@@ -42,9 +42,9 @@ const Footer: React.FC = () => {
         <div>
           <h5 className="text-white font-semibold mb-3">Get Help</h5>
           <ul className="space-y-2">
-            <li><Link href="https://hosting.omoolaex.com.ng/client-area/submitticket.php" className="hover:text-white">Submit a Support Ticket</Link></li>
-            <li><Link href="https://hosting.omoolaex.com.ng/client-area/submitticket.php" className="hover:text-white">Submit a Sales Enquiry</Link></li>
-            <li><Link href="https://hosting.omoolaex.com.ng/client-area/submitticket.php" className="hover:text-white">Report Abuse</Link></li>
+            <li><Link href="https://clients.exohost.com.ng/submitticket.php" className="hover:text-white">Submit a Support Ticket</Link></li>
+            <li><Link href="https://clients.exohost.com.ng/submitticket.php" className="hover:text-white">Submit a Sales Enquiry</Link></li>
+            <li><Link href="https://clients.exohost.com.ng/submitticket.php" className="hover:text-white">Report Abuse</Link></li>
             <li><Link href="#" className="hover:text-white">Blog</Link></li>
             <li><Link href="#" className="hover:text-white">About Us</Link></li>
             <li><Link href="#" className="hover:text-white">Payment Help</Link></li>
@@ -108,7 +108,7 @@ const Footer: React.FC = () => {
         <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400 gap-2">
           <p className="text-center md:text-left">
             By visiting this website, you agree to its{" "}
-            <Link href="/legal/terms-of-use" className="text-white hover:text-gray-500">
+            <Link href="#" className="text-white hover:text-gray-500">
               terms of use
             </Link>.
           </p>

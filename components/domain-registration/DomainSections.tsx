@@ -40,7 +40,7 @@ export default function ExoHostDomainSections() {
               Transfer your domain to ExoHost and enjoy hassle-free management. Certain domains get a free renewal when you transfer.
             </p>
             <a
-              href="https://hosting.omoolaex.com.ng/client-area/cart.php?a=add&domain=transfer"
+              href="https://clients.exohost.com.ng/cart.php?a=add&domain=transfer"
               className="inline-block"
             >
             <span className=" text-black px-6 py-2 hover:text-green-500">Transfer Your Domain </span>                

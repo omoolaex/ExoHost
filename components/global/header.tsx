@@ -105,7 +105,7 @@ const Header: React.FC = () => {
                     <p className="text-xs text-black/50">Find the perfect domain</p>
                   </Link>
                   <Link
-                    href="https://hosting.omoolaex.com.ng/client-area/cart.php?a=add&domain=transfer"
+                    href="https://clients.exohost.com.ng/cart.php?a=add&domain=transfer"
                     className={dropdownLink}
                   >
                     <p className="font-semibold">Domain Transfers</p>
@@ -187,7 +187,7 @@ const Header: React.FC = () => {
               {desktopDropdown === "partners" && (
                 <div className={dropdownBase}>
                   <Link
-                    href="https://hosting.omoolaex.com.ng/client-area/affiliates.php"
+                    href="https://clients.exohost.com.ng/affiliates.php"
                     className={dropdownLink}
                   >
                     <p className="font-semibold">Affiliates</p>
@@ -207,13 +207,13 @@ const Header: React.FC = () => {
           {/* Right side actions */}
           <div className="hidden md:flex items-center space-x-4">
             <Link
-              href="https://hosting.omoolaex.com.ng/client-area/submitticket.php"
+              href="https://clients.exohost.com.ng/submitticket.php"
               className="hover:text-[var(--color-primary)] text-sm font-medium"
             >
               Support
             </Link>
             <Link
-              href="https://hosting.omoolaex.com.ng/client-area/index.php/login"
+              href="https://clients.exohost.com.ng/index.php/login"
               className="px-4 py-2 border rounded-sm bg-white text-black font-semibold hover:opacity-90"
             >
               Login
@@ -257,7 +257,7 @@ const Header: React.FC = () => {
                 {mobileDropdown === "domains" && (
                   <div className="flex flex-col pl-4 space-y-1">
                     <Link href="/domain-registration" className="block w-full px-2 py-2 rounded hover:bg-gray-100">Register Domain</Link>
-                    <Link href="https://hosting.omoolaex.com.ng/client-area/cart.php?a=add&domain=transfer" className="block w-full px-2 py-2 rounded hover:bg-gray-100">Domain Transfers</Link>
+                    <Link href="https://clients.exohost.com.ng/cart.php?a=add&domain=transfer" className="block w-full px-2 py-2 rounded hover:bg-gray-100">Domain Transfers</Link>
                     <Link href="/whois-lookup" className="block w-full px-2 py-2 rounded hover:bg-gray-100">WHOIS Lookup</Link>
                   </div>
                 )}
@@ -300,7 +300,7 @@ const Header: React.FC = () => {
                 </button>
                 {mobileDropdown === "partners" && (
                   <div className="flex flex-col pl-4 space-y-1">
-                    <Link href="https://hosting.omoolaex.com.ng/client-area/affiliates.php" className="block w-full px-2 py-2 rounded hover:bg-gray-100">Affiliates</Link>
+                    <Link href="https://clients.exohost.com.ng/affiliates.php" className="block w-full px-2 py-2 rounded hover:bg-gray-100">Affiliates</Link>
                   </div>
                 )}
               </div>
@@ -309,13 +309,13 @@ const Header: React.FC = () => {
 
               <div className="border-t pt-4">
                 <Link
-                  href="https://hosting.omoolaex.com.ng/client-area/submitticket.php"
+                  href="https://clients.exohost.com.ng/submitticket.php"
                   className="block py-2"
                 >
                   Support
                 </Link>
                 <Link
-                  href="https://hosting.omoolaex.com.ng/client-area/index.php/login"
+                  href="https://clients.exohost.com.ng/index.php/login"
                   className="block py-2 font-semibold"
                 >
                   <span className="border rounded-3xl bg-white text-black p-2">Login</span>

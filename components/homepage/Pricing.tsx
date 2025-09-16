@@ -90,7 +90,7 @@ const Pricing: React.FC = () => {
       title: "Basic Hosting",
       desc: "Perfect for individuals getting started.",
       price: "1,800.00",
-      link: "https://hosting.omoolaex.com.ng/client-area/index.php?rp=/store/web-hosting/basic",
+      link: "https://clients.exohost.com.ng/index.php?rp=/store/web-hosting/basic",
       features: [
         { text: "2 GB SSD Storage", available: true, highlight: true },
         { text: "1 Website", available: true },
@@ -106,7 +106,7 @@ const Pricing: React.FC = () => {
       title: "Standard Hosting",
       desc: "Best for growing websites & small businesses.",
       price: "3,200.00",
-      link: "https://hosting.omoolaex.com.ng/client-area/cart.php?a=add&pid=2&carttpl=standard_cart",
+      link: "https://clients.exohost.com.ng/cart.php?a=add&pid=2&carttpl=standard_cart",
       features: [
         { text: "5 GB SSD Storage", available: true, highlight: true },
         { text: "Up to 3 Websites", available: true },
@@ -122,7 +122,7 @@ const Pricing: React.FC = () => {
       title: "Premium Hosting",
       desc: "For businesses that need more power.",
       price: "5,000.00",
-      link: "https://hosting.omoolaex.com.ng/client-area/index.php?rp=/store/web-hosting/premium",
+      link: "https://clients.exohost.com.ng/index.php?rp=/store/web-hosting/premium",
       features: [
         { text: "10 GB SSD Storage", available: true, highlight: true },
         { text: "Up to 5 Websites", available: true },
