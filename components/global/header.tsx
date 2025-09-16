@@ -8,13 +8,20 @@ import Image from "next/image";
 const Header: React.FC = () => {
   const [alertVisible, setAlertVisible] = useState(true);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [desktopDropdown, setDesktopDropdown] = useState<string | null>(null);
+  const [mobileDropdown, setMobileDropdown] = useState<string | null>(null);
 
   const dropdownRef = useRef<HTMLUListElement | null>(null);
   const mobileRef = useRef<HTMLDivElement | null>(null);
 
-  const toggleDropdown = (menu: string) => {
-    setOpenDropdown(openDropdown === menu ? null : menu);
+  // Toggle desktop dropdown
+  const toggleDesktopDropdown = (menu: string) => {
+    setDesktopDropdown(desktopDropdown === menu ? null : menu);
+  };
+
+  // Toggle mobile dropdown
+  const toggleMobileDropdown = (menu: string) => {
+    setMobileDropdown(mobileDropdown === menu ? null : menu);
   };
 
   // Close desktop dropdown on outside click
@@ -24,7 +31,7 @@ const Header: React.FC = () => {
         dropdownRef.current &&
         !dropdownRef.current.contains(event.target as Node)
       ) {
-        setOpenDropdown(null);
+        setDesktopDropdown(null);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -79,15 +86,11 @@ const Header: React.FC = () => {
             {/* Domains */}
             <li className="relative">
               <button
-                onClick={() => toggleDropdown("domains")}
+                onClick={() => toggleDesktopDropdown("domains")}
                 className="flex items-center hover:text-[var(--color-primary)] transition"
               >
                 Domains
-                <svg
-                  className="ml-1 h-4 w-4"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
+                <svg className="ml-1 h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
                   <path
                     fillRule="evenodd"
                     d="M5.23 7.21a.75.75 0 011.06-.02L10 10.67l3.71-3.48a.75.75 0 111.04 1.08l-4.25 4a.75.75 0 01-1.04 0l-4.25-4a.75.75 0 01-.02-1.06z"
@@ -95,7 +98,7 @@ const Header: React.FC = () => {
                   />
                 </svg>
               </button>
-              {openDropdown === "domains" && (
+              {desktopDropdown === "domains" && (
                 <div className={dropdownBase}>
                   <Link href="/domain-registration" className={dropdownLink}>
                     <p className="font-semibold">Register Domain</p>
@@ -119,7 +122,7 @@ const Header: React.FC = () => {
             {/* Hosting */}
             <li className="relative">
               <button
-                onClick={() => toggleDropdown("hosting")}
+                onClick={() => toggleDesktopDropdown("hosting")}
                 className="flex items-center hover:text-[var(--color-primary)] transition"
               >
                 Hosting
@@ -131,7 +134,7 @@ const Header: React.FC = () => {
                   />
                 </svg>
               </button>
-              {openDropdown === "hosting" && (
+              {desktopDropdown === "hosting" && (
                 <div className={dropdownBase}>
                   <Link href="/web-hosting" className={dropdownLink}>
                     <p className="font-semibold">Web Hosting</p>
@@ -144,7 +147,7 @@ const Header: React.FC = () => {
             {/* Websites */}
             <li className="relative">
               <button
-                onClick={() => toggleDropdown("websites")}
+                onClick={() => toggleDesktopDropdown("websites")}
                 className="flex items-center hover:text-[var(--color-primary)] transition"
               >
                 Websites
@@ -156,7 +159,7 @@ const Header: React.FC = () => {
                   />
                 </svg>
               </button>
-              {openDropdown === "websites" && (
+              {desktopDropdown === "websites" && (
                 <div className={dropdownBase}>
                   <Link href="/website-builder" className={dropdownLink}>
                     <p className="font-semibold">Website Builder</p>
@@ -169,7 +172,7 @@ const Header: React.FC = () => {
             {/* Partners */}
             <li className="relative">
               <button
-                onClick={() => toggleDropdown("partners")}
+                onClick={() => toggleDesktopDropdown("partners")}
                 className="flex items-center hover:text-[var(--color-primary)] transition"
               >
                 Partners
@@ -181,7 +184,7 @@ const Header: React.FC = () => {
                   />
                 </svg>
               </button>
-              {openDropdown === "partners" && (
+              {desktopDropdown === "partners" && (
                 <div className={dropdownBase}>
                   <Link
                     href="https://hosting.omoolaex.com.ng/client-area/affiliates.php"
@@ -227,30 +230,31 @@ const Header: React.FC = () => {
         </div>
       </nav>
 
-      {/* Mobile Drawer remains same */}
+      {/* Mobile Drawer */}
       {mobileOpen && (
         <div className="fixed inset-0 z-50 flex">
+          {/* Backdrop */}
           <div
             className="fixed inset-0 bg-black/40 backdrop-blur-sm"
             onClick={() => setMobileOpen(false)}
           ></div>
 
+          {/* Drawer */}
           <div
             ref={mobileRef}
             className="relative z-50 w-72 max-w-full h-full bg-[var(--background)] shadow-xl p-6 overflow-y-auto animate-slide-in-left"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Mobile menu items */}
             <div className="space-y-4">
-              {/* Domains */}
+              {/* Mobile dropdowns */}
               <div>
                 <button
-                  onClick={() => toggleDropdown("m-domains")}
+                  onClick={() => toggleMobileDropdown("domains")}
                   className="w-full flex justify-between items-center py-2 font-medium"
                 >
-                  Domains <span>{openDropdown === "m-domains" ? "−" : "+"}</span>
+                  Domains <span>{mobileDropdown === "domains" ? "−" : "+"}</span>
                 </button>
-                {openDropdown === "m-domains" && (
+                {mobileDropdown === "domains" && (
                   <div className="flex flex-col pl-4 space-y-1">
                     <Link href="/domain-registration" className="block w-full px-2 py-2 rounded hover:bg-gray-100">Register Domain</Link>
                     <Link href="https://hosting.omoolaex.com.ng/client-area/cart.php?a=add&domain=transfer" className="block w-full px-2 py-2 rounded hover:bg-gray-100">Domain Transfers</Link>
@@ -259,45 +263,42 @@ const Header: React.FC = () => {
                 )}
               </div>
 
-              {/* Hosting */}
               <div>
                 <button
-                  onClick={() => toggleDropdown("m-hosting")}
+                  onClick={() => toggleMobileDropdown("hosting")}
                   className="w-full flex justify-between items-center py-2 font-medium"
                 >
-                  Hosting <span>{openDropdown === "m-hosting" ? "−" : "+"}</span>
+                  Hosting <span>{mobileDropdown === "hosting" ? "−" : "+"}</span>
                 </button>
-                {openDropdown === "m-hosting" && (
+                {mobileDropdown === "hosting" && (
                   <div className="flex flex-col pl-4 space-y-1">
                     <Link href="/web-hosting" className="block w-full px-2 py-2 rounded hover:bg-gray-100">Web Hosting</Link>
                   </div>
                 )}
               </div>
 
-              {/* Websites */}
               <div>
                 <button
-                  onClick={() => toggleDropdown("m-websites")}
+                  onClick={() => toggleMobileDropdown("websites")}
                   className="w-full flex justify-between items-center py-2 font-medium"
                 >
-                  Websites <span>{openDropdown === "m-websites" ? "−" : "+"}</span>
+                  Websites <span>{mobileDropdown === "websites" ? "−" : "+"}</span>
                 </button>
-                {openDropdown === "m-websites" && (
+                {mobileDropdown === "websites" && (
                   <div className="flex flex-col pl-4 space-y-1">
                     <Link href="/website-builder" className="block w-full px-2 py-2 rounded hover:bg-gray-100">Website Builder</Link>
                   </div>
                 )}
               </div>
 
-              {/* Partners */}
               <div>
                 <button
-                  onClick={() => toggleDropdown("m-partners")}
+                  onClick={() => toggleMobileDropdown("partners")}
                   className="w-full flex justify-between items-center py-2 font-medium"
                 >
-                  Partners <span>{openDropdown === "m-partners" ? "−" : "+"}</span>
+                  Partners <span>{mobileDropdown === "partners" ? "−" : "+"}</span>
                 </button>
-                {openDropdown === "m-partners" && (
+                {mobileDropdown === "partners" && (
                   <div className="flex flex-col pl-4 space-y-1">
                     <Link href="https://hosting.omoolaex.com.ng/client-area/affiliates.php" className="block w-full px-2 py-2 rounded hover:bg-gray-100">Affiliates</Link>
                   </div>
