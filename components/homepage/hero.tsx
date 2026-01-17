@@ -1,9 +1,21 @@
-// components/sections/Hero.tsx
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 
 const Hero: React.FC = () => {
+  const [domain, setDomain] = useState("");
+
+  // Update this to your actual WHMCS installation URL
+  const WHMCS_URL = "https://clients.exohost.com.ng/cart.php?a=add&domain=register";
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!domain) return;
+    
+    // Redirects user to WHMCS cart with the query pre-filled
+    window.location.href = `${WHMCS_URL}&query=${encodeURIComponent(domain)}`;
+  };
+
   return (
     <section className="w-full bg-gradient-to-b from-[var(--color-primary)] to-[var(--background)] text-white py-12 md:py-20 lg:py-28">
       <div className="max-w-6xl mx-auto text-center px-4 sm:px-6">
@@ -24,20 +36,28 @@ const Hero: React.FC = () => {
           Let your business be found, trusted, and clicked.
         </p>
 
-        {/* Domain Search */}
-        <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch justify-center bg-white rounded-full shadow-lg overflow-hidden w-full max-w-lg sm:max-w-2xl md:max-w-3xl mx-auto">
-          <span className="hidden sm:flex items-center px-4 text-gray-600 font-medium">
+        {/* Domain Search Wired Up */}
+        <form 
+          onSubmit={handleSearch}
+          className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch justify-center bg-white rounded-full shadow-lg overflow-hidden w-full max-w-lg sm:max-w-2xl md:max-w-3xl mx-auto border-2 border-transparent focus-within:border-[var(--color-accent)] transition-all"
+        >
+          <span className="hidden sm:flex items-center px-6 text-gray-400 font-medium">
             www.
           </span>
           <input
             type="text"
+            value={domain}
+            onChange={(e) => setDomain(e.target.value)}
             placeholder="my-domain.ng"
-            className="flex-1 px-4 py-3 text-gray-900 placeholder-gray-400 focus:outline-none text-sm sm:text-base"
+            className="flex-1 px-4 py-4 text-gray-900 placeholder-gray-400 focus:outline-none text-base md:text-lg"
           />
-          <button className="bg-[var(--color-primary)] hover:opacity-90 text-white font-semibold px-6 py-3 text-sm sm:text-base">
+          <button 
+            type="submit"
+            className="bg-[var(--color-primary)] hover:bg-black text-white font-bold px-8 py-4 text-sm sm:text-base transition-colors"
+          >
             Check Availability
           </button>
-        </div>
+        </form>
 
         {/* Pricing list */}
         <div className="mt-8 sm:mt-10 flex flex-wrap justify-center gap-4 sm:gap-6">
@@ -49,7 +69,8 @@ const Hero: React.FC = () => {
           ].map((item) => (
             <div
               key={item.ext}
-              className="bg-white text-gray-900 px-4 sm:px-5 py-3 rounded-lg shadow-sm min-w-[100px] text-center"
+              onClick={() => setDomain(item.ext)} // Small UX: clicking price tags fills input
+              className="bg-white text-gray-900 px-4 sm:px-5 py-3 rounded-lg shadow-sm min-w-[100px] text-center cursor-pointer hover:scale-105 transition-transform"
             >
               <span className="block font-bold text-[var(--color-primary)] text-base sm:text-lg">
                 {item.ext}

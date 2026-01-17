@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
 
           <h5 className="text-white font-semibold mt-6 mb-3">Security</h5>
           <ul className="space-y-2">
-            <li><Link href="#" className="hover:text-white">SSL Certificates</Link></li>
+            <li><Link href="https://clients.exohost.com.ng/index.php?rp=/store/ssl-certificates" className="hover:text-white">SSL Certificates</Link></li>
           </ul>
         </div>
 
@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
           <h5 className="text-white font-semibold mb-3">Hosting</h5>
           <ul className="space-y-2">
             <li><Link href="/web-hosting" className="hover:text-white">Web Hosting</Link></li>
-            <li><Link href="#" className="hover:text-white">WordPress Hosting</Link></li>
+            <li><Link href="https://clients.exohost.com.ng/index.php?rp=/store/wordpress-hosting" className="hover:text-white">WordPress Hosting</Link></li>
             <li><Link href="#" className="hover:text-white">Reseller Hosting</Link></li>
             <li><Link href="/website-builder" className="hover:text-white">Site Builder</Link></li>
           </ul>
