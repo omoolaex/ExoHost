@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { GoogleTagManager, GoogleAnalytics } from '@next/third-parties/google';
 import "./globals.css";
 import Header from "@/components/global/header";
 import Footer from "@/components/global/Footer";
@@ -16,7 +17,6 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-// Centralized SEO Configuration
 export const metadata: Metadata = {
   metadataBase: new URL("https://exohost.com.ng"),
   title: {
@@ -24,20 +24,16 @@ export const metadata: Metadata = {
     template: "%s | ExoHost", 
   },
   description: "ExoHost provides dependable hosting and cloud infrastructure designed for startups, developers, and businesses across Africa and beyond.",
-  keywords: ["Cloud Hosting", "Web Hosting Africa", "Domain Registration", "Scalable Infrastructure", "Startups"],
-  
-  // Highlighting the relationship: ExoHost is the creator, OmoolaEx is the publisher/owner
+  keywords: ["Cloud Hosting", "Web Hosting Africa", "Domain Registration", "Scalable Infrastructure", "Startups", "Hosting in Nigeria", "Nigerian Web Hosting", "Reliable Hosting", "Secure Cloud Services"],
   authors: [
     { name: "ExoHost Team" },
     { name: "OmoolaEx", url: "https://omoolaex.com.ng" } 
   ],
   publisher: "OmoolaEx",
   creator: "ExoHost",
-  
   verification: {
     google: "vj_aE2-_vqBxj7kpCjPTZL45iE5XEE8jh9ghCGc6qwI",
   },
-
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png", 
@@ -49,14 +45,7 @@ export const metadata: Metadata = {
     siteName: "ExoHost",
     title: "ExoHost – Built for the next generation of builders",
     description: "Reliable, secure, and scalable infrastructure that empowers businesses to grow.",
-    images: [
-      {
-        url: "/logo-exohost.png",
-        width: 1200,
-        height: 630,
-        alt: "ExoHost Infrastructure",
-      },
-    ],
+    images: [{ url: "/logo-exohost.png", width: 1200, height: 630, alt: "ExoHost Infrastructure" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -65,18 +54,10 @@ export const metadata: Metadata = {
     images: ["/logo-exohost.png"],
     creator: "@exohost",
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  robots: { index: true, follow: true },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  // JSON-LD Structured Data: Establishing the Parent-Child Organization Link
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@id": "https://exohost.com.ng/#organization",
@@ -85,7 +66,6 @@ export default function RootLayout({
     "url": "https://exohost.com.ng",
     "logo": "https://exohost.com.ng/logo-exohost.png",
     "description": "Reliable cloud infrastructure and hosting services.",
-    // This property establishes OmoolaEx as the parent organization
     "parentOrganization": {
       "@type": "Organization",
       "name": "OmoolaEx",
@@ -99,9 +79,13 @@ export default function RootLayout({
 
   return (
     <html lang="en" className="scroll-smooth">
+      {/* 1. Google Tag Manager (Load in Head for early event tracking)
+          Replace 'GTM-XXXXXXX' with your actual container ID 
+      */}
+      <GoogleTagManager gtmId="GTM-NBKTB5PW" />
+      
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* Injecting JSON-LD for Search Engine Knowledge Graph */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -113,6 +97,11 @@ export default function RootLayout({
         <Header />
         <main className="flex-grow w-full">{children}</main>
         <Footer />
+        
+        {/* 2. Google Analytics (Load at bottom for performance) 
+            Replace 'G-XXXXXXX' with your Measurement ID
+        */}
+        <GoogleAnalytics gaId="G-WCWJJ90VRP" />
       </body>
     </html>
   );
