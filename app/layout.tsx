@@ -7,7 +7,7 @@ import Footer from "@/components/global/Footer";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
-  display: "swap", // better performance
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
@@ -16,11 +16,47 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
+// Centralized SEO Configuration
 export const metadata: Metadata = {
-  title: "ExoHost – Affordable Domains & Hosting",
-  description: "Find and register your perfect domain with ExoHost. Reliable web hosting & website solutions for businesses.",
+  metadataBase: new URL("https://exohost.com.ng"),
+  title: {
+    default: "ExoHost – Reliable Cloud Infrastructure & Hosting",
+    template: "%s | ExoHost", 
+  },
+  description: "ExoHost provides dependable hosting and cloud infrastructure designed for startups, developers, and businesses across Africa and beyond.",
+  keywords: ["Cloud Hosting", "Web Hosting Africa", "Domain Registration", "Scalable Infrastructure", "Startups"],
+  authors: [{ name: "ExoHost Team" }],
+  creator: "ExoHost",
   icons: {
     icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png", 
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://exohost.com.ng",
+    siteName: "ExoHost",
+    title: "ExoHost – Built for the next generation of builders",
+    description: "Reliable, secure, and scalable infrastructure that empowers businesses to grow.",
+    images: [
+      {
+        url: "/logo-exohost.png", // Create a 1200x630 image in /public
+        width: 1200,
+        height: 630,
+        alt: "ExoHost Infrastructure",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ExoHost | Cloud Infrastructure",
+    description: "Infrastructure that removes technical friction so you can focus on growth.",
+    images: ["/logo-exohost.png"],
+    creator: "@exohost",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
@@ -29,22 +65,35 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // JSON-LD Structured Data for Google Knowledge Graph
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ExoHost",
+    "url": "https://exohost.com.ng",
+    "logo": "https://exohost.com.ng/logo-exohost.png",
+    "description": "Reliable cloud infrastructure and hosting services.",
+    "sameAs": [
+      "https://twitter.com/exohost",
+      "https://linkedin.com/company/exohost"
+    ]
+  };
+
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        {/* Ensures responsive scaling on all devices */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {/* Injecting JSON-LD for SEO Rich Snippets */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[var(--background)] text-gray-900 flex flex-col min-h-screen`}
       >
-        {/* Global Header */}
         <Header />
-
-        {/* Main Content Area */}
         <main className="flex-grow w-full">{children}</main>
-
-        {/* Global Footer */}
         <Footer />
       </body>
     </html>
