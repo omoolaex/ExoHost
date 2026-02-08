@@ -95,7 +95,7 @@ const WhatWeDo: React.FC = () => {
             </div>
             <div className="mt-8">
               <a 
-                href="/contact" 
+                href="https://clients.exohost.com.ng/contact.php" 
                 className="inline-flex w-full items-center justify-center rounded-xl bg-[var(--color-primary)] px-6 py-3 text-sm font-bold text-[var(--color-secondary)] transition hover:bg-slate-800 active:scale-95"
               >
                 Contact Sales

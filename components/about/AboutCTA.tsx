@@ -51,7 +51,7 @@ const AboutCTA: React.FC = () => {
           </a>
 
           <a
-            href="/contact"
+            href="https://clients.exohost.com.ng/contact.php"
             className="w-full rounded-xl border border-slate-700 bg-slate-900/50 px-8 py-4 text-lg font-bold text-white backdrop-blur-sm transition hover:bg-slate-800 sm:w-auto"
           >
             Contact Sales
