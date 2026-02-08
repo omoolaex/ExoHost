@@ -25,8 +25,19 @@ export const metadata: Metadata = {
   },
   description: "ExoHost provides dependable hosting and cloud infrastructure designed for startups, developers, and businesses across Africa and beyond.",
   keywords: ["Cloud Hosting", "Web Hosting Africa", "Domain Registration", "Scalable Infrastructure", "Startups"],
-  authors: [{ name: "ExoHost Team" }],
+  
+  // Highlighting the relationship: ExoHost is the creator, OmoolaEx is the publisher/owner
+  authors: [
+    { name: "ExoHost Team" },
+    { name: "OmoolaEx", url: "https://omoolaex.com.ng" } 
+  ],
+  publisher: "OmoolaEx",
   creator: "ExoHost",
+  
+  verification: {
+    google: "vj_aE2-_vqBxj7kpCjPTZL45iE5XEE8jh9ghCGc6qwI",
+  },
+
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png", 
@@ -40,7 +51,7 @@ export const metadata: Metadata = {
     description: "Reliable, secure, and scalable infrastructure that empowers businesses to grow.",
     images: [
       {
-        url: "/logo-exohost.png", // Create a 1200x630 image in /public
+        url: "/logo-exohost.png",
         width: 1200,
         height: 630,
         alt: "ExoHost Infrastructure",
@@ -65,14 +76,21 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // JSON-LD Structured Data for Google Knowledge Graph
+  // JSON-LD Structured Data: Establishing the Parent-Child Organization Link
   const jsonLd = {
     "@context": "https://schema.org",
+    "@id": "https://exohost.com.ng/#organization",
     "@type": "Organization",
     "name": "ExoHost",
     "url": "https://exohost.com.ng",
     "logo": "https://exohost.com.ng/logo-exohost.png",
     "description": "Reliable cloud infrastructure and hosting services.",
+    // This property establishes OmoolaEx as the parent organization
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "OmoolaEx",
+      "url": "https://omoolaex.com.ng"
+    },
     "sameAs": [
       "https://twitter.com/exohost",
       "https://linkedin.com/company/exohost"
@@ -83,7 +101,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* Injecting JSON-LD for SEO Rich Snippets */}
+        {/* Injecting JSON-LD for Search Engine Knowledge Graph */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
