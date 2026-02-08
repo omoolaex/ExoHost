@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
             <li><Link href="https://clients.exohost.com.ng/submitticket.php" className="hover:text-white">Submit a Sales Enquiry</Link></li>
             <li><Link href="https://clients.exohost.com.ng/submitticket.php" className="hover:text-white">Report Abuse</Link></li>
             <li><Link href="#" className="hover:text-white">Blog</Link></li>
-            <li><Link href="#" className="hover:text-white">About Us</Link></li>
+            <li><Link href="/about" className="hover:text-white">About Us</Link></li>
             <li><Link href="#" className="hover:text-white">Payment Help</Link></li>
           </ul>
         </div>
@@ -55,11 +55,11 @@ const Footer: React.FC = () => {
         <div>
           <h5 className="text-white font-semibold mb-3">Legals</h5>
           <ul className="space-y-2">
-            <li><Link href="#" className="hover:text-white">Terms & Conditions</Link></li>
-            <li><Link href="#" className="hover:text-white">Refund Policy</Link></li>
-            <li><Link href="#" className="hover:text-white">Privacy Policy</Link></li>
-            <li><Link href="#" className="hover:text-white">Acceptable Use Policy</Link></li>
-            <li><Link href="#" className="hover:text-white">Affiliate Terms</Link></li>
+            <li><Link href="/tos" className="hover:text-white">Terms & Conditions</Link></li>
+            <li><Link href="/refund-policy" className="hover:text-white">Refund Policy</Link></li>
+            <li><Link href="/policy" className="hover:text-white">Privacy Policy</Link></li>
+            <li><Link href="/hosting-aup" className="hover:text-white">Acceptable Use Policy</Link></li>
+            <li><Link href="/affiliate-terms" className="hover:text-white">Affiliate Terms</Link></li>
           </ul>
         </div>
       </div>
